@@ -8,9 +8,7 @@ Features a sleek dark-themed interface, path picker utilities, live terminal enc
 
 ## Screenshots 📸
 
-*(Add screenshots of the application here to show the dark-themed UI, live terminal, and file picker.)*
-
-<!-- Example format: ![App Screenshot](screenshots/main_screen.png) -->
+![App Screenshot](screenshots/app_demo.png)
 
 ---
 
