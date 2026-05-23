@@ -6,6 +6,14 @@ Features a sleek dark-themed interface, path picker utilities, live terminal enc
 
 ---
 
+## Screenshots 📸
+
+*(Add screenshots of the application here to show the dark-themed UI, live terminal, and file picker.)*
+
+<!-- Example format: ![App Screenshot](screenshots/main_screen.png) -->
+
+---
+
 ## Features ✨
 
 - 🗂️ **Dynamic Path Selection**: Easily specify input files and choose destination directories using native OS file pickers.
@@ -38,6 +46,7 @@ To build and run the application locally, you will need:
 │   └── ffmpeg.exe (or ffmpeg)
 ├── lib/
 │   └── main.dart             # Core application UI and process logic
+├── screenshots/              # Application screenshots and demo media
 ├── test/
 │   └── widget_test.dart      # Smoke tests for the main application UI
 ├── windows/                  # Windows runner config (includes CMake copy step)
@@ -71,7 +80,7 @@ To package a standalone executable with FFmpeg included:
 ```bash
 flutter build windows --release
 ```
-*Note: The CMake build configuration in `windows/CMakeLists.txt` will automatically copy `bin/ffmpeg.exe` into the build output folder (`build/windows/runner/Release/`) next to `h265_renderer.exe`.*
+*Note: The CMake build configuration in `windows/CMakeLists.txt` will automatically copy `bin/ffmpeg.exe` into the build output folder (`build/windows/x64/runner/Release/`) next to `h265_renderer.exe`.*
 
 #### Linux
 ```bash
