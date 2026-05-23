@@ -106,3 +106,11 @@ install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
 install(FILES "${AOT_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
   CONFIGURATIONS Profile;Release
   COMPONENT Runtime)
+
+# Copy FFmpeg binary to the bundle directory if it exists
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../bin/ffmpeg.exe")
+  install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/../bin/ffmpeg.exe"
+    DESTINATION "${CMAKE_INSTALL_PREFIX}"
+    COMPONENT Runtime)
+endif()
+
