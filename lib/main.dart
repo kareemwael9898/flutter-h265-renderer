@@ -39,10 +39,10 @@ String _resolveFfmpegPath() {
   final String localPath = p.join(executableDir, binaryName);
 
   if (File(localPath).existsSync()) {
-    print('Found ffmpeg at: $localPath');
+    debugPrint('Found ffmpeg at: $localPath');
     return localPath;
   }
-  print('FFmpeg not found at: $localPath');
+  debugPrint('FFmpeg not found at: $localPath');
   return binaryName;
 }
 
@@ -292,7 +292,7 @@ class _RendererScreenState extends State<RendererScreen> {
           'libx265 · CRF 28 · veryfast preset · AAC 160 k',
           style: TextStyle(
             fontSize: 13,
-            color: const Color(0xFFEBEBF5).withOpacity(0.45),
+            color: const Color(0xFFEBEBF5).withValues(alpha: 0.45),
             letterSpacing: 0.2,
           ),
         ),
@@ -325,7 +325,7 @@ class _RendererScreenState extends State<RendererScreen> {
                   label,
                   style: TextStyle(
                     fontSize: 11,
-                    color: const Color(0xFFEBEBF5).withOpacity(0.5),
+                    color: const Color(0xFFEBEBF5).withValues(alpha: 0.5),
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -336,7 +336,7 @@ class _RendererScreenState extends State<RendererScreen> {
                     fontSize: 13,
                     color: path != null
                         ? const Color(0xFFEBEBF5)
-                        : const Color(0xFFEBEBF5).withOpacity(0.3),
+                        : const Color(0xFFEBEBF5).withValues(alpha: 0.3),
                     overflow: TextOverflow.ellipsis,
                   ),
                   maxLines: 1,
@@ -429,7 +429,7 @@ class _RendererScreenState extends State<RendererScreen> {
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
-                  color: const Color(0xFFEBEBF5).withOpacity(0.5),
+                  color: const Color(0xFFEBEBF5).withValues(alpha: 0.5),
                   letterSpacing: 0.4,
                 ),
               ),
@@ -441,7 +441,7 @@ class _RendererScreenState extends State<RendererScreen> {
                     'Clear',
                     style: TextStyle(
                       fontSize: 12,
-                      color: const Color(0xFF0A84FF).withOpacity(0.8),
+                      color: const Color(0xFF0A84FF).withValues(alpha: 0.8),
                     ),
                   ),
                 ),
@@ -463,7 +463,7 @@ class _RendererScreenState extends State<RendererScreen> {
                         'FFmpeg output will appear here…',
                         style: TextStyle(
                           fontSize: 13,
-                          color: const Color(0xFFEBEBF5).withOpacity(0.2),
+                          color: const Color(0xFFEBEBF5).withValues(alpha: 0.2),
                           fontStyle: FontStyle.italic,
                         ),
                       ),
