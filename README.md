@@ -109,3 +109,7 @@ The project includes GitHub Actions workflows under `.github/workflows/`:
   - Packages and uploads a ZIP artifact containing the application executable and the bundled FFmpeg binary ready for redistribution.
 - **`Build Windows Application`** (`build_windows.yml`):
   - Fast compiler test workflow validating release builds without downloading external binaries.
+
+---
+
+*Done using Antigravity and Replit AI Agent by Kareem Wael*
