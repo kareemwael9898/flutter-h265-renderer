@@ -28,3 +28,18 @@ jobs:
         with:
           name: windows-release-build
           path: build/windows/x64/runner/Release/
+
+      - name: Compress Build Artifacts
+        run: Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath windows-release.zip
+
+      - name: Create Public Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+        with:
+          tag_name: release-${{ github.run_number }}
+          name: Release ${{ github.run_number }}
+          files: windows-release.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

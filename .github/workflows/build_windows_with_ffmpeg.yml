@@ -43,3 +43,18 @@ jobs:
         with:
           name: windows-release-build-with-ffmpeg
           path: build/windows/x64/runner/Release/
+
+      - name: Compress Build Artifacts
+        run: Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath windows-release-with-ffmpeg.zip
+
+      - name: Create Public Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+        with:
+          tag_name: release-ffmpeg-${{ github.run_number }}
+          name: Release with FFmpeg ${{ github.run_number }}
+          files: windows-release-with-ffmpeg.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
