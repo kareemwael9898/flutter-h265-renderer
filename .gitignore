@@ -45,3 +45,4 @@ app.*.map.json
 /android/app/release
 bin/ffmpeg
 bin/ffmpeg.exe
+*.zip
