@@ -26,6 +26,16 @@ Features a sleek dark-themed interface, path picker utilities, live terminal enc
 
 ---
 
+## 📥 Download the Latest Release
+
+- Download the latest Windows build (with bundled FFmpeg):
+  
+  👉 [windows-release-with-ffmpeg.zip](https://github.com/kareemwael9898/flutter-h265-renderer/releases/download/release-ffmpeg-3/windows-release-with-ffmpeg.zip)
+  
+  [See all releases](https://github.com/kareemwael9898/flutter-h265-renderer/releases)
+
+---
+
 ## Technical Architecture & Setup 🛠️
 
 ### Prerequisites
